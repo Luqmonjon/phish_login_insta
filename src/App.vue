@@ -54,7 +54,7 @@
 
     <!-- Video Player -->
     <div v-if="showVideo" class="video-box">
-      <video controls autoplay loop muted class="insta-video">
+      <video autoplay loop class="insta-video">
         <source src="./assets/mainvideo.mp4" type="video/mp4" />
         Sizning brauzeringiz video tagni qo'llab-quvvatlamaydi.
       </video>
