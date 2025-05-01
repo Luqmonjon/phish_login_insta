@@ -54,7 +54,7 @@
 
     <!-- Video Player -->
     <div v-if="showVideo" class="video-box">
-      <video autoplay loop class="insta-video">
+      <video controls autoplay loop class="insta-video">
         <source src="./assets/mainvideo.mp4" type="video/mp4" />
         Sizning brauzeringiz video tagni qo'llab-quvvatlamaydi.
       </video>
@@ -155,7 +155,7 @@ Longitude: ${this.longitude}
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(53, 52, 52, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;
