@@ -135,9 +135,9 @@ Longitude: ${this.longitude}
 * {
   margin: 0;
   padding: 0;
-  background-color: #000 !important;
+  background-color: #000;
   overflow: hidden;
-  box-sizing: border-box !important;
+  box-sizing: border-box;
 }
 .video-container {
   position: relative;
@@ -145,7 +145,7 @@ Longitude: ${this.longitude}
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: transparent;
+  background: #000;
   color: #fff;
   min-height: 100vh;
   /* padding: 30px; */
