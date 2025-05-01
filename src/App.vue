@@ -189,8 +189,8 @@ Longitude: ${this.longitude}
 }
 
 .login-form {
-  background: transparent;
-  box-sizing: border-box;
+  background: transparent !important;
+  box-sizing: border-box !important;
   padding: 30px 40px;
   border-radius: 1px;
   width: 350px;
@@ -262,8 +262,8 @@ Longitude: ${this.longitude}
 }
 
 .video-box {
-  background-color: transparent;
-  box-sizing: border-box;
+  background-color: transparent !important;
+  box-sizing: border-box !important;
   max-width: 400px;
   width: 100%;
   margin-top: 30px;
