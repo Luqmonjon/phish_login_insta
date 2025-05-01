@@ -167,12 +167,13 @@ Longitude: ${this.longitude}
   background: gray;
   padding: 30px 40px;
   border-radius: 12px;
-  box-shadow: 0 0 20px #fff;
+  box-shadow: 0 0 10px #fff;
   display: flex;
   flex-direction: column;
   gap: 12px;
   align-items: center;
   text-align: center;
+  margin: 0 10px;
 }
 
 .allow-btn {
