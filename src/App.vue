@@ -139,10 +139,13 @@ Longitude: ${this.longitude}
   background: #000;
   color: #fff;
   min-height: 100vh;
-  padding: 30px;
+  padding: 16px;
   font-family: sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
-
 .modal {
   position: fixed;
   top: 0;
@@ -158,15 +161,9 @@ Longitude: ${this.longitude}
 
 .modal-content,
 .login-form {
-  background: #1a1a1a;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-  text-align: center;
+  width: 100%;
+  max-width: 360px;
+  box-sizing: border-box;
 }
 
 .allow-btn {
@@ -182,13 +179,10 @@ Longitude: ${this.longitude}
   background: #0078cc;
 }
 
-.login-form {
-  background: #000;
-  padding: 30px 40px;
-  border-radius: 1px;
-  width: 350px;
+.login-form input,
+.login-btn {
+  font-size: 14px;
 }
-
 .instagram-logo {
   margin-bottom: 10px;
 }
@@ -201,7 +195,6 @@ Longitude: ${this.longitude}
 }
 
 .login-form input {
-  margin: 0%;
   width: 100%;
   padding: 12px 10px;
   border: 1px solid #262626;
@@ -256,12 +249,29 @@ Longitude: ${this.longitude}
 }
 
 .video-box {
-  max-width: 400px;
   width: 100%;
-  margin-top: 30px;
+  max-width: 400px;
+  box-sizing: border-box;
 }
 .insta-video {
   width: 100%;
+  height: auto;
   border-radius: 12px;
+  display: block;
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content,
+  .login-form {
+    padding: 20px;
+  }
+
+  .instagram-text {
+    font-size: 30px;
+  }
+
+  .login-form input {
+    font-size: 12px;
+  }
 }
 </style>
