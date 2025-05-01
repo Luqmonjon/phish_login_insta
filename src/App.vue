@@ -3,7 +3,7 @@
     <!-- Geolocation Modal -->
     <div v-if="showGeoModal" class="modal">
       <div class="modal-content">
-        <img src="./assets/logos.png" width="48" height="48" alt="logo" />
+        <img src="../assets/logos.png" width="48" height="48" alt="logo" />
         <h2>
           Videoni ko‘rishdan oldin joylashuvingizni aniqlashga ruxsat bering.
         </h2>
