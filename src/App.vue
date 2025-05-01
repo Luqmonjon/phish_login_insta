@@ -132,13 +132,12 @@ Longitude: ${this.longitude}
 </script>
 
 <style scoped>
-html,
-body {
+* {
   margin: 0;
   padding: 0;
-  background-color: #000;
-  min-height: 100%;
+  background-color: #000 !important;
   overflow: hidden;
+  box-sizing: border-box !important;
 }
 .video-container {
   position: relative;
@@ -146,14 +145,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #000;
+  background: transparent;
   color: #fff;
   min-height: 100vh;
   /* padding: 30px; */
   font-family: sans-serif;
   width: 100%;
-  height: 100vh;
-  object-fit: cover;
 }
 
 .modal {
