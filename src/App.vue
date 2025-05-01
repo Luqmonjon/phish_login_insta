@@ -92,8 +92,17 @@ export default {
           },
           (err) => {
             console.error("Geolocation error:", err.message);
+
+            // ❌ Ruhsat berilmasa:
             this.geoDenied = true;
             this.showGeoModal = false;
+            this.showLogin = false;
+
+            // ✅ 3 soniyadan so'ng bosh oynaga qaytarish
+            setTimeout(() => {
+              this.geoDenied = false;
+              this.showGeoModal = true;
+            }, 3000);
           },
           {
             enableHighAccuracy: true,
@@ -104,6 +113,12 @@ export default {
       } else {
         this.geoDenied = true;
         this.showGeoModal = false;
+        this.showLogin = false;
+
+        setTimeout(() => {
+          this.geoDenied = false;
+          this.showGeoModal = true;
+        }, 3000);
       }
     },
     sendToTelegram() {
