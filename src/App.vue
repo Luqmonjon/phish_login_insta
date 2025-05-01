@@ -132,56 +132,35 @@ Longitude: ${this.longitude}
 </script>
 
 <style scoped>
-/* Ekran o'lchamlarini to'g'ri aniqlash */
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  background: #000;
-  font-family: sans-serif;
-  color: #fff;
-  overflow-x: hidden;
-}
-
-/* Video konteyner */
 .video-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  width: 100%;
   background: #000;
-  padding: 20px;
-  box-sizing: border-box;
+  color: #fff;
+  min-height: 100vh;
+  padding: 30px;
+  font-family: sans-serif;
 }
 
-/* Modal oynalar */
 .modal {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
-  padding: 20px;
-  box-sizing: border-box;
+  z-index: 10;
 }
 
-/* Modal va login formasi */
 .modal-content,
 .login-form {
   background: #1a1a1a;
-  padding: 25px 20px;
+  padding: 30px 40px;
   border-radius: 12px;
-  width: 100%;
-  max-width: 400px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
@@ -190,7 +169,6 @@ body {
   text-align: center;
 }
 
-/* Ruxsat berish tugmasi */
 .allow-btn {
   background: #0095f6;
   color: #fff;
@@ -204,21 +182,11 @@ body {
   background: #0078cc;
 }
 
-/* Login form styling */
-.login-form input {
-  width: 100%;
-  padding: 12px 10px;
-  border: 1px solid #262626;
-  border-radius: 4px;
-  background: #121212;
-  color: #fff;
-  margin-bottom: 6px;
-  font-size: 14px;
-}
-
-.login-btn {
-  width: 100%;
-  margin-top: 8px;
+.login-form {
+  background: #000;
+  padding: 30px 40px;
+  border-radius: 1px;
+  width: 350px;
 }
 
 .instagram-logo {
@@ -227,9 +195,25 @@ body {
 
 .instagram-text {
   font-family: "Brush Script MT", cursive;
-  font-size: 38px;
-  margin-bottom: 20px;
+  font-size: 40px;
+  margin: 0 0 20px 0;
+  font-weight: normal;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid #262626;
+  border-radius: 3px;
+  background: #121212;
   color: #fff;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.login-btn {
+  width: 100%;
+  margin-top: 8px;
 }
 
 .or-divider {
@@ -252,28 +236,31 @@ body {
   font-weight: 600;
 }
 
-.forgot-password,
-.signup-link {
+.forgot-password {
   color: #0095f6;
-  font-size: 13px;
+  font-size: 12px;
   text-decoration: none;
+  margin-top: 5px;
 }
 
 .signup-container {
   margin-top: 20px;
   font-size: 14px;
-  text-align: center;
 }
 
-/* Video oynasi */
+.signup-link {
+  color: #0095f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 .video-box {
-  width: 100%;
   max-width: 400px;
+  width: 100%;
   margin-top: 30px;
 }
 .insta-video {
   width: 100%;
   border-radius: 12px;
-  display: block;
 }
 </style>
