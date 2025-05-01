@@ -132,6 +132,11 @@ Longitude: ${this.longitude}
 </script>
 
 <style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .video-container {
   display: flex;
   flex-direction: column;
@@ -149,7 +154,7 @@ Longitude: ${this.longitude}
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.85);
+  /* background: rgba(0, 0, 0, 0.85); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,6 +165,7 @@ Longitude: ${this.longitude}
 .login-form {
   background: #1a1a1a;
   padding: 30px 40px;
+  margin: 0 20px;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
   display: flex;
