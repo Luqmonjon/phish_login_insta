@@ -167,7 +167,7 @@ Longitude: ${this.longitude}
   background: gray;
   padding: 30px 40px;
   border-radius: 12px;
-  box-shadow: 0 0 20px #585757;
+  box-shadow: 0 0 20px #fff;
   display: flex;
   flex-direction: column;
   gap: 12px;
