@@ -135,22 +135,18 @@ Longitude: ${this.longitude}
 * {
   margin: 0;
   padding: 0;
-  background-color: #000;
-  overflow: hidden;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
+  background-color: #000 !important;
 }
 .video-container {
-  position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #000;
+  background: #f00;
   color: #fff;
   min-height: 100vh;
-  /* padding: 30px; */
+  padding: 30px;
   font-family: sans-serif;
-  width: 100%;
 }
 
 .modal {
@@ -159,6 +155,7 @@ Longitude: ${this.longitude}
   left: 0;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,7 +166,6 @@ Longitude: ${this.longitude}
 .login-form {
   background: #1a1a1a;
   padding: 30px 40px;
-  margin: 0 20px;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
   display: flex;
@@ -193,7 +189,7 @@ Longitude: ${this.longitude}
 }
 
 .login-form {
-  background: transparent;
+  background: #000;
   padding: 30px 40px;
   border-radius: 1px;
   width: 350px;
