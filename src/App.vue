@@ -193,7 +193,7 @@ Longitude: ${this.longitude}
 }
 
 .login-form {
-  background: #000;
+  background: transparent;
   padding: 30px 40px;
   border-radius: 1px;
   width: 350px;
