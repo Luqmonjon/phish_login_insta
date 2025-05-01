@@ -155,7 +155,7 @@ Longitude: ${this.longitude}
   left: 0;
   width: 100%;
   height: 100%;
-  background: #f00;
+  background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,10 +164,10 @@ Longitude: ${this.longitude}
 
 .modal-content,
 .login-form {
-  background: #1a1a1a;
+  background: gray;
   padding: 30px 40px;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(224, 75, 75, 0.1);
+  box-shadow: 0 0 20px #585757;
   display: flex;
   flex-direction: column;
   gap: 12px;
