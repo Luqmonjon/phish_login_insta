@@ -54,7 +54,7 @@
 
     <!-- Video Player -->
     <div v-if="showVideo" class="video-box">
-      <video controls autoplay class="insta-video">
+      <video controls autoplay loop muted class="insta-video">
         <source src="./assets/mainvideo.mp4" type="video/mp4" />
         Sizning brauzeringiz video tagni qo'llab-quvvatlamaydi.
       </video>
@@ -271,5 +271,6 @@ Longitude: ${this.longitude}
 .insta-video {
   width: 100%;
   border-radius: 12px;
+  object-fit: cover;
 }
 </style>
