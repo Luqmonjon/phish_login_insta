@@ -175,8 +175,8 @@ Longitude: ${this.longitude}
   text-align: center;
 }
 
-.allow-btn {
-  background: #0095f6;
+.modal-content .allow-btn {
+  background: #0095f6 !important;
   color: #fff;
   border: none;
   border-radius: 8px;
