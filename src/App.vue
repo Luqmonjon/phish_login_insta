@@ -132,20 +132,28 @@ Longitude: ${this.longitude}
 </script>
 
 <style scoped>
-* {
+html,
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #000;
+  min-height: 100%;
+  overflow: hidden;
 }
 .video-container {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #000;
   color: #fff;
   min-height: 100vh;
-  padding: 30px;
+  /* padding: 30px; */
   font-family: sans-serif;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .modal {
@@ -154,7 +162,6 @@ Longitude: ${this.longitude}
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: rgba(0, 0, 0, 0.85); */
   display: flex;
   justify-content: center;
   align-items: center;
