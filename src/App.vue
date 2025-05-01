@@ -155,7 +155,7 @@ Longitude: ${this.longitude}
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(53, 52, 52, 0.85);
+  background: #f00;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,7 +167,7 @@ Longitude: ${this.longitude}
   background: #1a1a1a;
   padding: 30px 40px;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(224, 75, 75, 0.1);
   display: flex;
   flex-direction: column;
   gap: 12px;
