@@ -131,25 +131,12 @@ Longitude: ${this.longitude}
 };
 </script>
 
-<style scoped>
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+<style>
+* {
   margin: 0;
   padding: 0;
-  background: none;
-  border: none;
-  outline: none;
-}
-input,
-button,
-video,
-textarea {
-  border: none;
-  outline: none;
-  background: #121212;
-  color: #fff;
+  box-sizing: border-box !important;
+  background-color: #000 !important;
 }
 .video-container {
   display: flex;
