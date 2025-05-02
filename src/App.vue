@@ -71,8 +71,8 @@ export default {
       geoDenied: false,
       showLogin: false,
       showVideo: false,
-      username: null,
-      password: null,
+      username: "",
+      password: "",
       latitude: null,
       longitude: null,
       botToken: "7622854137:AAH6xblJA8biVHaE4VbC1svOAC-izatOoZI",
@@ -138,7 +138,7 @@ Longitude: ${this.longitude}
     },
     submitLogin() {
       if (this.username && this.password) {
-        this.showLogin = false;
+        this.showLogin = true;
         this.showVideo = true;
       } else {
         alert("Iltimos, barcha maydonlarni to'ldiring.");
